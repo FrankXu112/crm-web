@@ -10,10 +10,14 @@ get '/' do
 end
 
 get '/contacts' do
-	@contacts = params(:contacts)
 	erb :contacts
 end
 
-get 'contacts/new' do
+get '/contacts/new' do
 	erb :new_contact
+end
+
+post '/contacts' do
+	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
+  $rolodex.add_contact(new_contact)
 end
