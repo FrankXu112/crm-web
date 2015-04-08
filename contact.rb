@@ -8,12 +8,4 @@ class Contact
         @email = email
         @notes = notes
     end
-
-    def to_s
-    	return "contact id: #{id}\n" + 
-    	 "first name: #{first_name}\n" +
-    	 "last name: #{last_name}\n" +
-    	 "email: #{email}\n" +
-    	 "notes: #{notes}"
-    end
 end
