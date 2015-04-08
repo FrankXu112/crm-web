@@ -10,10 +10,10 @@ class Contact
     end
 
     def to_s
-    	puts "contact id: #{id}"
-    	puts "first name: #{first_name}"
-    	puts "last name: #{last_name}"
-    	puts "email: #{email}"
-    	puts "notes: #{notes}"
+    	return "contact id: #{id}\n" + 
+    	 "first name: #{first_name}\n" +
+    	 "last name: #{last_name}\n" +
+    	 "email: #{email}\n" +
+    	 "notes: #{notes}"
     end
 end
