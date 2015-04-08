@@ -1,6 +1,7 @@
 require_relative 'contact'
 require_relative 'rolodex'
 require 'sinatra'
+require 'pry'
 
 $rolodex = Rolodex.new
 
@@ -17,8 +18,34 @@ get '/contacts/new' do
 	erb :new_contact
 end
 
+get '/contacts/:id/edit' do
+	@contact = $rolodex.find(params[:id])
+	erb :modify_contact
+end
+
+put '/contacts/:id' do
+	contact = $rolodex.find(params[:id])
+	contact.first_name = params[:first_name]
+	contact.last_name = params[:last_name]
+	contact.email = params[:email]
+	contact.notes = params[:notes]
+
+	redirect to ('/contacts')
+end
+
 post '/contacts' do
 	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
     $rolodex.add_contact(new_contact)
     redirect to('/contacts')
 end
+
+
+delete '/contacts/:id' do
+	contact = $rolodex.find(params[:id])
+	$rolodex.delete_contact(contact)
+	redirect to('/contacts')
+end
+
+# $rolodex.add_contact(Contact.new("Matt", "Holtom", "matt@gmail.com", "fooo note"))
+# $rolodex.add_contact(Contact.new("Frank", "Xu", "matt@gmail.com", "fooo note"))
+
