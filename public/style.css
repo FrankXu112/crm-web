@@ -1,0 +1,60 @@
+
+
+section.header{
+	padding: 20px;
+	font-size: 50px;
+	font-family: sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	border-bottom: 2px solid #8AC007;
+	background-image: url("http://blueprintcreatives.com/wp-content/uploads/2013/03/pattern.png");
+	z-index: -1
+}
+
+section.footer{
+	position:absolute;
+	bottom:0;
+}
+
+li{
+	color:#808080;
+	font-size: 40px;
+}
+
+h1{
+	text-align: center;
+	font-size: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+body{
+	background-image: url("http://i.stack.imgur.com/W6Fuk.png");
+}
+
+p{
+	position: relative;
+	left: 300;
+	right: 200;
+}
+
+ul{
+	position: relative;
+	left: 300;
+	right: 200;
+}
+
+img {
+    position: absolute;
+    left: 200px;
+    top: 10px;
+    z-index: 0;
+}
+
+form label{
+	color: white;
+}
+
+form#delete{
+	display: inline-block;
+}

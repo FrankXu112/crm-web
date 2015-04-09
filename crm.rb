@@ -1,24 +1,26 @@
 require_relative 'contact'
 require_relative 'rolodex'
 require 'sinatra'
-require 'pry'
 
 $rolodex = Rolodex.new
 
 get '/' do
-	@crm_app_name = "My CRM"
+	@crm_app_name = "Frank's CRM"
 	erb :index
 end
 
 get '/contacts' do
+	@crm_app_name = "Frank's CRM"
 	erb :contacts
 end
 
 get '/contacts/new' do
+	@crm_app_name = "Frank's CRM"
 	erb :new_contact
 end
 
 get '/contacts/:id/edit' do
+	@crm_app_name = "Frank's CRM"
 	@contact = $rolodex.find(params[:id])
 	erb :modify_contact
 end
@@ -46,6 +48,6 @@ delete '/contacts/:id' do
 	redirect to('/contacts')
 end
 
-# $rolodex.add_contact(Contact.new("Matt", "Holtom", "matt@gmail.com", "fooo note"))
-# $rolodex.add_contact(Contact.new("Frank", "Xu", "matt@gmail.com", "fooo note"))
+$rolodex.add_contact(Contact.new("Matt", "Holtom", "matt@gmail.com", "sad"))
+$rolodex.add_contact(Contact.new("Frank", "Xu", "frank@gmail.com", "happy"))
 

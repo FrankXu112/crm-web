@@ -1,14 +1,18 @@
-<h1>All Contacts</h1>
+<h1 class="bg-primary">All Contacts</h1>
 <ul>
 	<% $rolodex.contacts.each do |contact| %>
 	   <li><%= contact.id %> <%= contact.first_name %> <%= contact.last_name%> <%= contact.email%> <%= contact.notes%> 
-	   	  <a href="/contacts/<%= contact.id %>/edit">Edit this Contact</a>
-	   	  <form action="/contacts/<%= contact.id %>" method="POST">
+
+	   	  <a class="btn btn-info" href="/contacts/<%= contact.id %>/edit">Edit this Contact</a>
+
+	   	  <form id="delete" action="/contacts/<%= contact.id %>" method="POST">
 	   	  	<input type="hidden" name="_method" value="DELETE" />
-	   	  	<input type="submit" value="Delete" />
+	   	  	<input type="submit" value="Delete" class="btn btn-danger" />
 	   	  </form>
 	   </li>
 	<% end %>   
 </ul>
-<p><a href="/">Return to Main Menu</a></p>
 
+<section class="footer">
+<p><a href="/">Return to Main Menu</a></p>
+</section>
