@@ -1,15 +1,16 @@
-<h1 class="bg-primary">All Contacts</h1>
+<h1>All Contacts</h1>
 <ul>
 	<% $rolodex.contacts.each do |contact| %>
-	   <li><%= contact.id %> <%= contact.first_name %> <%= contact.last_name%> <%= contact.email%> <%= contact.notes%> 
-
+    
+	  <li><a href="/contacts/<%= contact.id %>"><%= contact.first_name %> <%= contact.last_name%></a>
+    
 	   	  <a class="btn btn-info" href="/contacts/<%= contact.id %>/edit">Edit this Contact</a>
 
 	   	  <form id="delete" action="/contacts/<%= contact.id %>" method="POST">
 	   	  	<input type="hidden" name="_method" value="DELETE" />
 	   	  	<input type="submit" value="Delete" class="btn btn-danger" />
 	   	  </form>
-	   </li>
+	  </li>
 	<% end %>   
 </ul>
 

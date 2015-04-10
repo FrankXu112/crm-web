@@ -1,4 +1,4 @@
-<h1 class="bg-primary">Modify Contact</h1>
+<h1>Modify Contact</h1>
 
 <form class="form-horizontal" action="/contacts/<%= @contact.id %>" method="POST">
 	<input type="hidden" name="_method" value="PUT">
@@ -30,7 +30,9 @@
     </div>
   </div>    
   
-  <input class="btn-success" type="submit" name="Submit">
+  <div class="form-group">
+  <input class="btn btn-success submit" type="submit" name="Submit">
+  </div>
 </form>
 
 <section class="footer">

@@ -25,6 +25,12 @@ get '/contacts/:id/edit' do
 	erb :modify_contact
 end
 
+get '/contacts/:id' do
+	@crm_app_name = "Frank's CRM"
+	@contact = $rolodex.find(params[:id])	
+	erb :show
+end
+
 put '/contacts/:id' do
 	contact = $rolodex.find(params[:id])
 	contact.first_name = params[:first_name]

@@ -1,4 +1,6 @@
-
+form#delete{
+	display: inline-block;
+}
 
 section.header{
 	padding: 20px;
@@ -6,14 +8,19 @@ section.header{
 	font-family: sans-serif;
 	color: white;
 	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-	border-bottom: 2px solid #8AC007;
+	border-bottom: 2px solid white;
 	background-image: url("http://blueprintcreatives.com/wp-content/uploads/2013/03/pattern.png");
 	z-index: -1
+}
+
+section.header h1{
+	color: white;
 }
 
 section.footer{
 	position:absolute;
 	bottom:0;
+	font-size: 30px;
 }
 
 li{
@@ -22,14 +29,19 @@ li{
 }
 
 h1{
+	font-family: 'Lobster', cursive;
 	text-align: center;
 	font-size: 50px;
 	position: relative;
 	z-index: 2;
+	color: #A1A1A1;
 }
 
 body{
-	background-image: url("http://i.stack.imgur.com/W6Fuk.png");
+	background-image: url("/stardust.png");
+/*	background-repeat: no-repeat;*/
+	background-position: center;
+
 }
 
 p{
@@ -55,6 +67,27 @@ form label{
 	color: white;
 }
 
-form#delete{
-	display: inline-block;
+ul.list {
+	color:#808080;
+	display: block; 
+	text-align:center;
+}
+
+ul.list li{
+	display: block;
+}
+
+a, a:hover{
+	color:#808080;
+}
+
+
+input.submit{
+	float: right;
+	margin-right: 15px;
+}
+p.profile{
+	font-size: 40px;
+	color:#808080;
+	text-align: center;
 }
