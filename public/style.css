@@ -57,9 +57,7 @@ ul{
 }
 
 img {
-    position: absolute;
-    left: 200px;
-    top: 10px;
+    position: relative;
     z-index: 0;
 }
 
