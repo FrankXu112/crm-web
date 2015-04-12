@@ -61,6 +61,24 @@ img {
     z-index: 0;
 }
 
+img.icon{
+	height: 100px;
+  width: 100px;
+  position: relative;
+  top: 130px;
+  left: 550px;
+}
+
+img.icon_home{
+	height: 100px;
+  width: 100px;
+}
+
+img.icon_phone{
+	height: 70px;
+  width: 70px;
+}
+
 form label{
 	color: white;
 }
@@ -87,5 +105,5 @@ input.submit{
 p.profile{
 	font-size: 40px;
 	color:#808080;
-	text-align: center;
+	text-align: justify;
 }
