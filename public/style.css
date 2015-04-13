@@ -21,6 +21,7 @@ section.footer{
 	position:absolute;
 	bottom:0;
 	font-size: 30px;
+	width: 100%;
 }
 
 li{
@@ -65,13 +66,16 @@ img.icon{
 	height: 100px;
   width: 100px;
   position: relative;
-  top: 130px;
-  left: 550px;
+  float: right;
+  margin-top: 250px;
 }
 
 img.icon_home{
 	height: 100px;
   width: 100px;
+  position: relative;
+  left: 0;
+  bottom: 0;
 }
 
 img.icon_phone{
@@ -108,10 +112,10 @@ p.profile{
 	text-align: justify;
 }
 
-footer.site_footer{
+section.footer h4{
 	text-align: center;
 	color: #808080;
-	position: absolute;
-	bottom: 0;
-	left: 570px;
+/*	position: relative;
+	bottom: 0;*/
+	margin: 0 0 auto;
 }
