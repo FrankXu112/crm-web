@@ -107,3 +107,11 @@ p.profile{
 	color:#808080;
 	text-align: justify;
 }
+
+footer.site_footer{
+	text-align: center;
+	color: #808080;
+	position: absolute;
+	bottom: 0;
+	left: 570px;
+}
